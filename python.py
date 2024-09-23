@@ -26,3 +26,11 @@ for nota in notas[1]:
         print(notas[0][2],"Suficiente")
     else:
         print(notas[0][3],"Insuficiente")
+
+# Aquí podemos ver que tanto el if como el for me arranca sin yo llamarlo, ahora cuando estoy haciendo un programa yo quiero que eso funcione cuando yo quiera, lo puedo meter dentro de un def
+# FUNCIONES
+def sacar_promedio(nombre,calificaciones = []):
+    promedio = sum(calificaciones)/len(calificaciones)
+    print(f"El promedio de {nombre} es de {promedio} puntos")
+
+sacar_promedio("Amalia",[97,78,86,90,100])
