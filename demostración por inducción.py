@@ -7,9 +7,9 @@ def miembro_izquierdo(n):
 
 def miembro_derecho(n):
     q_n = (n*(n+1)*((2*n)+1))//6
-    print(q_n)
+    return q_n
     
-n = 5
+n = 4
 
 if miembro_izquierdo(n) == miembro_derecho(n):
     print("Queda demostrado")
