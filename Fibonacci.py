@@ -24,3 +24,27 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
     
 print(fibonacci(6))
+
+
+# Intentemos ahora hacer una función que sume todos los elementos hasta n de la sucesión de fibonacci
+# Paso 1: Caso base
+    # si n=1. fibonacci_suma es 0
+    # si n=2. fibonacci_suma es 1
+# Paso 2: Divide y vencerás
+    # si n=3. fibonacci_suma es 0+1+1 = 3
+        # ya vimos el patrón. fibonacci_suma de 3 es fibonacci(3)+fibonacci(2)+fibonacci(1)
+    # si n = 4. fibonacci_suma es 0+1+1+2 = 4
+        # fibonacci(4)+ fibonacci(3)+fibonacci(2)+fibonacci(1)
+        # fibonacci(n) + fibonacci_suma(n-1)
+
+# bamos a descubrir si desde una función se puede llamar otra
+
+def fibonacci_suma(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fibonacci(n) + fibonacci_suma(n-1)
+    
+print(fibonacci_suma(6))
